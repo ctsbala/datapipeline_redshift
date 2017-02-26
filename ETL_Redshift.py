@@ -131,9 +131,6 @@ class copyFromS3toTable(luigi.contrib.redshift.S3CopyToTable):
     
     @property
     def do_truncate_table(self):
-        """
-        Return True if table should be truncated before copying new data in.
-        """
         return True
     
 
@@ -189,6 +186,7 @@ class snapShotAndShutDown(luigi.Task):
         
     def output(self):
         pass
+
 
 if __name__ == "__main__":
     d=date.today().strftime("%Y-%m-%d")
