@@ -190,7 +190,6 @@ class snapShotAndShutDown(luigi.Task):
     def output(self):
         pass
 
-
 if __name__ == "__main__":
     d=date.today().strftime("%Y-%m-%d")
     luigi.run(main_task_cls=snapShotAndShutDown,cmdline_args=["--snapshotdate={0}".format(d)])        
